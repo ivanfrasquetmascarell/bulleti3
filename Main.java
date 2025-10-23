@@ -58,7 +58,7 @@ public class Main {
         System.out.println("Act 6");
         System.out.println();
 
-        Act6 a6 = new Act6("Datasets-20251016/alumnos.json");
+        Act6 a6 = new Act6("archivos/alumnos.json");
         a6.mostrarNotaMaxima();
         a6.mostrarMediaMasAlta();
     }
