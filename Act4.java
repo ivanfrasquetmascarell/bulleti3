@@ -52,6 +52,11 @@ public class Act4 {
         }
     }
 
+    /**
+     * muestra los items del pedido pasado y el calcula el precio
+     * @param idPedido
+     * @return
+     */
     public boolean mostrarItemsDePedido(String idPedido) {
         Optional<Pedido> pedidoOpt = pedidos.stream()
                 .filter(p -> p.getId().equalsIgnoreCase(idPedido))
@@ -118,6 +123,10 @@ class Pedido {
         this.totalXML = totalXML;
     }
 
+    /**
+     * calcula el total de un pedido
+     * @return
+     */
     public double calcularTotal() {
         return items.stream()
                 .mapToDouble(i -> i.getCantidad() * i.getPrecioUnitario())

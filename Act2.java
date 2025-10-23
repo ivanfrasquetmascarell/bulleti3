@@ -41,10 +41,13 @@ public class Act2 {
         }
     }
 
-    public void mostrarDepartamentos() {
+    /**
+     * muestra por pantalla el departamento, el numeo de emleados y el salario medios, devuelve true o false si hay o no empleados
+     * @return
+     */
+    public boolean mostrarDepartamentos() {
         if (empleados.isEmpty()) {
-            System.out.println("No hay empleados cargados.");
-            return;
+            return false;
         }
 
         Map<String, Double> salarioMedio = empleados.stream()
@@ -65,6 +68,7 @@ public class Act2 {
         for (String dept : salarioMedio.keySet()) {
             System.out.printf("%-15s | %-13d | %-15.2f%n", dept, conteo.get(dept), salarioMedio.get(dept));
         }
+        return true;
     }
 }
 

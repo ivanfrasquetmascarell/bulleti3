@@ -46,22 +46,29 @@ public class Act3 {
         }
     }
 
-    public void mostrarTitulos() {
+    /**
+     * devuelve true o false si hay o no libros y muestra por pantalla los titulos de estos
+     * @return
+     */
+    public Boolean mostrarTitulos() {
         if (libros.isEmpty()) {
-            System.out.println("No hay libros cargados.");
-            return;
+            return false;
         }
 
         System.out.println("Títulos de los libros:");
         for (Libro libro : libros) {
             System.out.println("- " + libro.getTitulo());
         }
+        return true;
     }
 
-    public void mostrarConteoPorGenero() {
+    /**
+     * devuelve true o false ademas de la cantidad de libros que hay por genero
+     * @return
+     */
+    public boolean mostrarConteoPorGenero() {
         if (libros.isEmpty()) {
-            System.out.println("No hay libros cargados.");
-            return;
+            return false;
         }
 
         Map<String, Long> conteo = libros.stream()
@@ -74,6 +81,7 @@ public class Act3 {
         conteo.forEach((genero, cantidad) ->
                 System.out.printf("%-15s | %-10d%n", genero, cantidad)
         );
+        return true;
     }
 }
 

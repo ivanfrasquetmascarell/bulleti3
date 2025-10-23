@@ -39,12 +39,27 @@ public class Main {
         System.out.println("Act 4");
         System.out.println();
 
-        Act4 a4 = new Act4("archivos/pedidos.xml");
+       /* Act4 a4 = new Act4("archivos/pedidos.xml");
         Scanner lector = new Scanner(System.in);
         System.out.print("Introduce el ID del pedido: ");
         String id = lector.nextLine();
 
         a4.mostrarItemsDePedido(id);
-        lector.close();
+        lector.close();*/
+
+        System.out.println();
+        System.out.println("Act 5");
+        System.out.println();
+
+        Act5 a5 = new Act5("archivos/alumnos.json");
+        a5.mostrarInfo();
+
+        System.out.println();
+        System.out.println("Act 6");
+        System.out.println();
+
+        Act6 a6 = new Act6("Datasets-20251016/alumnos.json");
+        a6.mostrarNotaMaxima();
+        a6.mostrarMediaMasAlta();
     }
 }
